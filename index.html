@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>远方</title>
+  <title>哈哈大p孩</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="远方">
+  <meta name="description" content="哈哈大p孩的博文">
+<meta property="og:type" content="website">
+<meta property="og:title" content="哈哈大p孩">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="远方">
+<meta property="og:site_name" content="哈哈大p孩">
+<meta property="og:description" content="哈哈大p孩的博文">
 <meta property="og:locale">
-<meta property="article:author" content="远方">
+<meta property="article:author" content="哈哈大p孩">
+<meta property="article:tag" content="哈哈大p孩">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="远方" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="哈哈大p孩" type="application/atom+xml">
   
   
     <link rel="icon" href="/uploads/junjie.jpg">
@@ -46,8 +49,10 @@
 			<img src="/uploads/junjie.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">哈哈大p孩</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">不忘初心，方得始终</p>
 		
 
 		<nav class="header-menu">
@@ -111,8 +116,10 @@
 				<img src="/uploads/junjie.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">哈哈大p孩</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不忘初心，方得始终<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -156,6 +163,185 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-20210420-iOS中包体优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/20/20210420-iOS%E4%B8%AD%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96/">iOS中包体优化实践</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/20/20210420-iOS%E4%B8%AD%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96/" class="archive-article-date">
+  	<time datetime="2021-04-20T11:28:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-20</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>随着业务的不断发展，大型app对于包体会比较敏感，本篇主要针对自己在项目中实际进行优化的方向进行一次记录。</p>
+<p>主要方向如下几点：</p>
+<ul>
+<li>.app包体内容整体归类分析</li>
+<li>图片差异比较和优化（包括解析Assets.car）</li>
+<li>无用函数</li>
+<li>无用类</li>
+<li>无用图片</li>
+<li>重复资源检测</li>
+<li>linkmap分析(二进制文件)</li>
+<li>armv7架构去除统计</li>
+<li>__Text段迁移</li>
+</ul>
+        
+          <a class="article-more-a" href="/2021/04/20/20210420-iOS%E4%B8%AD%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">包体优化</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/20/20210420-iOS%E4%B8%AD%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-20210310-iOS13以下包体优化方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/10/20210310-iOS13%E4%BB%A5%E4%B8%8B%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/">iOS13以下包体优化方案</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/10/20210310-iOS13%E4%BB%A5%E4%B8%8B%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="archive-article-date">
+  	<time datetime="2021-03-10T09:47:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>目前项目包体下载大小：</p>
+<ul>
+<li>iOS13及以上：110M左右</li>
+<li>iOS13以下：192M左右</li>
+</ul>
+<p>下载大小超过200MB的时候，对于低版本的系统，将无法用流量下载，高版本系统也需要用户自己手动设置。</p>
+<h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><p>730测试期间，iOS13以下的包体下载大小：</p>
+<ul>
+<li>优化前：198M</li>
+<li>优化后：153M</li>
+</ul>
+<p>减小了45M，优化效果较为明显。</p>
+<h3 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h3><p>Apple 在 iOS13 + 去掉了对可执行文件的 <em>__</em>TEXT 段加密，使得iOS13+的系统比低版本系统下载大小减小了30%-40%。</p>
+<p>iOS13以下优化方案：可将可执行文件中一部分段从 __TEXT 段中移动到其他段来绕过加密，提高可执行文件的压缩效率，从而使下载大小减小。</p>
+        
+          <a class="article-more-a" href="/2021/03/10/20210310-iOS13%E4%BB%A5%E4%B8%8B%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">_TEXT</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/10/20210310-iOS13%E4%BB%A5%E4%B8%8B%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-20200530-WKWebView相关整理篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -807,162 +993,6 @@
 
 
   
-    <article id="post-20190705-iOS中取消延迟执行函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/05/20190705-iOS%E4%B8%AD%E5%8F%96%E6%B6%88%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/">iOS中取消延迟执行函数</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/05/20190705-iOS%E4%B8%AD%E5%8F%96%E6%B6%88%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2019-07-05T05:57:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在iOS中，延迟操作的执行有很多种，但是如果要取消上一次延迟并继续本次延迟呢。</p>
-<p>场景：输入内容，停止输入后延迟1秒执行其他操作，如果期间还继续输入，则重新计时。</p>
-        
-          <a class="article-more-a" href="/2019/07/05/20190705-iOS%E4%B8%AD%E5%8F%96%E6%B6%88%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">延迟</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/05/20190705-iOS%E4%B8%AD%E5%8F%96%E6%B6%88%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20190704-常用一些命令备忘录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/04/20190704-%E5%B8%B8%E7%94%A8%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/">常用一些命令备忘录</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/04/20190704-%E5%B8%B8%E7%94%A8%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/" class="archive-article-date">
-  	<time datetime="2019-07-04T03:05:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-04</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="mac下"><a href="#mac下" class="headerlink" title="mac下"></a>mac下</h3><ul>
-<li>允许所有来源 ：sudo spctl –master-disable</li>
-<li>禁止未认证的：sudo spctl –master-enable</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">bash</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/04/20190704-%E5%B8%B8%E7%94%A8%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -977,7 +1007,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 远方
+    		&copy; 2021 哈哈大p孩
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1054,11 +1084,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">kvc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tableview</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">kvc</a>
+                <a href="javascript:void(0)" class="js-tag color4">kvo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1074,15 +1108,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">kvo</a>
+                <a href="javascript:void(0)" class="js-tag color5">FMDB</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">react native</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">FMDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1215,6 +1245,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">NSOperation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">包体优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">_TEXT</a>
               </li>
             
             <div class="clearfix"></div>

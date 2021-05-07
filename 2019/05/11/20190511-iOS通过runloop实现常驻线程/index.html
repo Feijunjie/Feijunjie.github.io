@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>iOS通过runloop实现常驻线程 | 远方</title>
+  <title>iOS通过runloop实现常驻线程 | 哈哈大p孩</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="实际操作中我们会发现，对于子线程来说，默认情况下它只会执行一次，执行完成后就会线程就为finished状态，只能销毁再创建。那我们想让该线程变为常驻线程，实时听从调度，该怎么做呢？很简单，用runloop即可。 iOS中runloop是和线程一一对应的，并且runloop是管理线程的，当线程的runloop被开启后，线程会在执行完任务后进入休眠状态，有了任务就会被唤醒去执行任务。默认情况下子线程的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS通过runloop实现常驻线程">
 <meta property="og:url" content="http://yoursite.com/2019/05/11/20190511-iOS%E9%80%9A%E8%BF%87runloop%E5%AE%9E%E7%8E%B0%E5%B8%B8%E9%A9%BB%E7%BA%BF%E7%A8%8B/index.html">
-<meta property="og:site_name" content="远方">
+<meta property="og:site_name" content="哈哈大p孩">
 <meta property="og:description" content="实际操作中我们会发现，对于子线程来说，默认情况下它只会执行一次，执行完成后就会线程就为finished状态，只能销毁再创建。那我们想让该线程变为常驻线程，实时听从调度，该怎么做呢？很简单，用runloop即可。 iOS中runloop是和线程一一对应的，并且runloop是管理线程的，当线程的runloop被开启后，线程会在执行完任务后进入休眠状态，有了任务就会被唤醒去执行任务。默认情况下子线程的">
 <meta property="og:locale">
 <meta property="article:published_time" content="2019-05-11T06:25:37.000Z">
 <meta property="article:modified_time" content="2019-05-13T02:20:44.000Z">
-<meta property="article:author" content="远方">
+<meta property="article:author" content="哈哈大p孩">
 <meta property="article:tag" content="runloop">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="远方" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="哈哈大p孩" type="application/atom+xml">
   
   
     <link rel="icon" href="/uploads/junjie.jpg">
@@ -51,8 +51,10 @@
 			<img src="/uploads/junjie.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">哈哈大p孩</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">不忘初心，方得始终</p>
 		
 
 		<nav class="header-menu">
@@ -116,8 +118,10 @@
 				<img src="/uploads/junjie.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">哈哈大p孩</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不忘初心，方得始终<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -395,7 +399,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 远方
+    		&copy; 2021 哈哈大p孩
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -472,11 +476,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">kvc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tableview</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">kvc</a>
+                <a href="javascript:void(0)" class="js-tag color4">kvo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -492,15 +500,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">kvo</a>
+                <a href="javascript:void(0)" class="js-tag color5">FMDB</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">react native</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">FMDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -633,6 +637,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">NSOperation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">包体优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">_TEXT</a>
               </li>
             
             <div class="clearfix"></div>
