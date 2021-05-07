@@ -16,7 +16,7 @@
 <meta property="og:description" content="随着业务的不断发展，大型app对于包体会比较敏感，本篇主要针对自己在项目中实际进行优化的方向进行一次记录。 主要方向如下几点：  .app包体内容整体归类分析 图片差异比较和优化（包括解析Assets.car） 无用函数 无用类 无用图片 重复资源检测 linkmap分析(二进制文件) armv7架构去除统计 __Text段迁移">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-04-20T11:28:50.000Z">
-<meta property="article:modified_time" content="2021-04-29T09:59:39.799Z">
+<meta property="article:modified_time" content="2021-05-07T11:57:06.894Z">
 <meta property="article:author" content="哈哈大p孩">
 <meta property="article:tag" content="包体优化">
 <meta name="twitter:card" content="summary">
@@ -226,6 +226,7 @@
 <h3 id="4-无用图片"><a href="#4-无用图片" class="headerlink" title="4. 无用图片"></a>4. 无用图片</h3><p>通过工具LSUnusedResources检测工程，得到的图片也是需要二次确认的，因为有的图片在工程中可能是拼接形式引用的。</p>
 <h3 id="5-重复图片"><a href="#5-重复图片" class="headerlink" title="5. 重复图片"></a>5. 重复图片</h3><p>重复图片主要通过fdupes命令执行，可以通过脚本运行该命令，将重复信息输出到指定文件中。如果是多个项目pod库中的重复，可以采取建立公共资源库。</p>
 <h3 id="6-TEXT段迁移"><a href="#6-TEXT段迁移" class="headerlink" title="6. __TEXT段迁移"></a>6. __TEXT段迁移</h3><p>针对iOS13以下系统，迁移__TEXT段，绕过苹果加密，提升ipa压缩效率，可以使包体减小30%-40%左右。</p>
+<p>可参考之前写的这篇文章<a target="_blank" rel="noopener" href="https://feijunjie.github.io/2021/03/10/20210310-iOS13%E4%BB%A5%E4%B8%8B%E5%8C%85%E4%BD%93%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/">iOS13以下包体优化方案</a></p>
 <h3 id="7-armv7架构移除"><a href="#7-armv7架构移除" class="headerlink" title="7. armv7架构移除"></a>7. armv7架构移除</h3><p>armv7架构支持的是iPhone4s之前的设备，这个是否需要移除要根据统计的用户设备数量和支付情况等具体衡量。移除掉大概减小60M左右。</p>
 <p>以上就是本人在项目中的优化方案，后续有其他方向也会在这边更新。</p>
 
